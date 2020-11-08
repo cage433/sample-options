@@ -9,10 +9,10 @@ val enumeratum              = "com.beachape" %% "enumeratum" % "1.5.15"
 
 
 lazy val example = Project(id = "example", base = file("."))
-    .settings(
-      Compile / scalaSource := baseDirectory.value / "src",
-      Test / scalaSource := baseDirectory.value / "tests",
-    )
+  .settings(
+    Compile / scalaSource := baseDirectory.value / "src",
+    Test / scalaSource := baseDirectory.value / "tests",
+  )
   .settings(
     libraryDependencies ++= Seq(
       commonsMath3, 
@@ -21,25 +21,3 @@ lazy val example = Project(id = "example", base = file("."))
     ),
 
   )
-
-/*lazy val example = module("example")*/
-  /*.settings(*/
-    /*libraryDependencies ++= Seq(*/
-      /*commonsMath3, */
-      /*enumeratum,*/
-      /*scalaTest*/
-    /*),*/
-
-  /*)*/
-
-
-/*def module(id: String): Project = {*/
-  /*val base = file(id)*/
-
-  /*Project(id = id, base = base)*/
-    /*.settings(*/
-      /*Compile / scalaSource := baseDirectory.value / "src",*/
-      /*Test / scalaSource := baseDirectory.value / "tests",*/
-    /*)*/
-/*}*/
-
